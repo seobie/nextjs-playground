@@ -1,9 +1,17 @@
-import '../styles/globals.css';
+import { ThemeProvider } from 'styled-components';
+
+import GlobalStyle from '../styles/globalStyle';
+import theme from '../styles/theme';
+
 import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
 
 export default MyApp;

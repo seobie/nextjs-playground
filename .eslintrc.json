@@ -38,6 +38,7 @@
     }
   },
   "rules": {
+    "react/jsx-props-no-spreading": 1,
     "no-console": ["error", { "allow": ["warn", "error", "info"] }],
     "import/order": [
       // ref https://github.com/import-js/eslint-plugin-import/blob/main/README.md
